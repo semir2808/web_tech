@@ -10,10 +10,15 @@ body {
 }
 
 /* 1. alle links in de navigatie -> color: crimson; */
+nav a{
+      color: crimson;
+}
 
 
 /* 2. alleen de paragrafen in de footer -> font-size: 0.875rem; */
-
+footer p{
+      font-size: 0.875rem;
+}
 
 /* 3. alleen de lijstitems van het BUITENSTE niveau in de lijst met de class
       rassen (dus niet de items van de binnenlijsten) -> outline: 2px solid crimson;
