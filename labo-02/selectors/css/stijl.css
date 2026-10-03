@@ -24,23 +24,35 @@ footer p{
       rassen (dus niet de items van de binnenlijsten) -> outline: 2px solid crimson;
       (outline tekent een kader rond precies het element dat je raakte; de
       property zelf komt in hoofdstuk 3) */
-
+#rassen{
+      outline: 2px solid crimson;
+}
 
 /* 4. de paragraaf die onmiddellijk na elke h2 komt -> font-style: italic; */
-
+H2 p{
+      font-style: italic;
+}
 
 /* 5. elk oneven item in de lijst met openingsuren -> background-color: #f1e9dc; */
-
+.uren :nth-child(odd){
+      background-color: #f1e9dc;
+}
 
 /* 6. het laatste item in de lijst met openingsuren -> color: crimson; */
-
+.uren :last-child{
+      color: crimson;
+}
 
 /* 7. de slogan en de intro tegelijk, in één regel -> color: darkslateblue; */
-
+.slogan, #uren{
+      color: darkslateblue;
+}
 
 /* 8. elke link in main wanneer de muis erover gaat OF wanneer ze focus heeft
       -> background-color: yellow; */
-
+main a:hover{
+      background-color: yellow;
+}
 
 
 /* ---- Lezen: welke elementen raken deze vijf selectors? Schrijf het antwoord
