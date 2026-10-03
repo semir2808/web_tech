@@ -24,7 +24,7 @@ footer p{
       rassen (dus niet de items van de binnenlijsten) -> outline: 2px solid crimson;
       (outline tekent een kader rond precies het element dat je raakte; de
       property zelf komt in hoofdstuk 3) */
-#rassen{
+.rassen{
       outline: 2px solid crimson;
 }
 

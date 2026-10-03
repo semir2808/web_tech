@@ -1,17 +1,21 @@
 # Labo 2 - reflecties
 
-Naam: (jouw naam)
+Naam: Vehbic Semir
 
 ## 2. Selectors lezen
 
 Welke elementen raakt elke selector? Eén zin per selector.
 
 - a. `header nav ul li a`: 
+//een link dan in een lijst van een navigatie van de header staat.
 - b. `article > p`: 
+Het directe p child van een aricle element
 - c. `.uren li:nth-child(3)`: 
+Het 3de kind in een lijst waarvan de class = uren
 - d. `h2 ~ p`: 
+elke p na een h2 binnen dezelfde ouder
 - e. `.rassen li:first-child`: 
-
+Het eerste directe kind in een lijst waarvan de class = rassen
 ## 3. Voorspel, dan kijk
 
 Vul de eerste twee kolommen in vóór je de pagina opent. Trede: herkomst, specificiteit, volgorde of overerving (of iets anders, benoem het).
