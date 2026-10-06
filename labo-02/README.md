@@ -41,7 +41,7 @@ Fouten omdat ik de theorie niet goed genoeg ken.
 - Welke selector koos je voor de links in de navigatie, en waarom geen class?
 nav a ==> omdat je anders een onnodige class moet aanmaken
 - Welke regel kostte je het meeste tijd, en wat was uiteindelijk de oorzaak?
-herkomst omdat ik het nog niet begrijp.
+herkomst omdat ik het nog niet begrijp
 
 ## 6. Je site
 
