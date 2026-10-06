@@ -22,18 +22,19 @@ Vul de eerste twee kolommen in vóór je de pagina opent. Trede: herkomst, speci
 
 | vraag | mijn voorspelling (kleur) | beslissende trede | uitkomst in de browser | juist? |
 |---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
-| 9 | | | | |
-| 10 | | | | |
+| 1 |groen |specificiteit |groen |juist |
+| 2 |blauw |volgorde |blauw |juist |
+| 3 |blauw |volgorde |rood |fout |
+| 4 |rood |specificiteit |rood |juist |
+| 5 |rood |specificiteit |blauw |fout |
+| 6 |rood |herkomst |blauw |fout |
+| 7 |rood |specificiteit |rood |juist |
+| 8 |rood |specificiteit |blauw |fout |
+| 9 |rood |important! |rood |juist |
+| 10 |blauw |volgorde |blauw |juist |
 
 Bij welke vraag zat je fout, en wat was de reden? (Alles juist? Welke vraag duurde het langst, en waarom?)
+Fouten omdat ik de theorie niet goed genoeg ken.
 
 ## 4. De nabouw
 
