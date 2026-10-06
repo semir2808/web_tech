@@ -39,11 +39,14 @@ Fouten omdat ik de theorie niet goed genoeg ken.
 ## 4. De nabouw
 
 - Welke selector koos je voor de links in de navigatie, en waarom geen class?
+nav a ==> omdat je anders een onnodige class moet aanmaken
 - Welke regel kostte je het meeste tijd, en wat was uiteindelijk de oorzaak?
+herkomst omdat ik het nog niet begrijp.
 
 ## 6. Je site
 
 - Welke drie waarden staan in je tokenblok, en waarom die?
+
 - Wat verandert er in je site als je één token wijzigt?
 
 ## Thuis: R2.3 (met AI)
