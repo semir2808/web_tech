@@ -39,9 +39,11 @@ Fouten omdat ik de theorie niet goed genoeg ken.
 ## 4. De nabouw
 
 - Welke selector koos je voor de links in de navigatie, en waarom geen class?
-nav a ==> omdat je anders een onnodige class moet aanmaken
+omdat je anders een onnodige class moet aanmaken
+de nav>ul>li>a . omdat er niet bij elke opsomming een nav was dus kan kon ik specifiek die targeten. 
 - Welke regel kostte je het meeste tijd, en wat was uiteindelijk de oorzaak?
-herkomst omdat ik het nog niet begrijp
+De regels met font-weight. omdat ik die niet makkelijk kon targeten. van nature waren ze allemaal al fout. dus moest ik eerst alles naar lower case zetten en dan specifiek enkele uppercase. 
+
 
 ## 6. Je site
 
