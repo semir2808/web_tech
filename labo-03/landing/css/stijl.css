@@ -2,7 +2,110 @@
 
 /* === tokens === */
 :root {
+    --banner: #c8b8ff;
+    --link:  #5551ff;
+    --hero: #779cee;
 
 }
 
 /* === your rules === */
+
+.banner {
+    background-color: var(--banner);
+    text-align: center;
+    font-family: arial;
+}
+
+div>p { 
+    padding: 1rem;
+}
+
+p a{
+    color: var(--link);
+}
+
+nav {
+    text-align: right;
+}
+
+ul>li {
+    display: inline-block;
+    text-align: right;
+}
+
+ul>li>a {
+    text-decoration: none;
+    color: black;
+    font-family: arial;
+    padding: 1rem 0.7rem;
+}
+
+ul>li>a:hover {
+    background-color: lightgrey;
+    border: 2px solid black;
+    border-radius: 0.6rem;
+}
+
+body {
+
+}
+
+main {
+    background-color: var(--hero);
+    min-height: 85vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 3.5rem;
+    min-width: 85rem;
+
+}
+
+article {
+    display: inline-block;
+    width: 50%;
+    margin-left: 7rem;
+    margin-right: 24rem;
+    font-family: arial;
+    padding-right: 11rem;
+}
+
+.afbeelding {
+    display: inline-block;
+    width: 50%;
+    padding-bottom: 9rem;
+}
+
+img {
+    width: 80%;
+    margin-left: -15rem;
+}
+
+.bovenkop {
+    padding-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+h1 {
+    padding-bottom: 1.2rem;
+}
+
+p {
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+
+article > a {
+    background-color: black;
+    border: 2px solid black;
+    color: lightgrey;
+    text-decoration: none;
+    border-radius: 0.6rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+}
+
+article > a:hover {
+    background-color: lightgrey;
+    color: black;
+}
