@@ -46,10 +46,6 @@ ul>li>a:hover {
     border-radius: 0.6rem;
 }
 
-body {
-
-}
-
 main {
     background-color: var(--hero);
     min-height: 85vh;
