@@ -5,15 +5,11 @@
 
 }
 
-/* === your rules === */
-
-body {
-}
-
-main{
+/* === your rules === */ 
+main {
+    background-color: #2554ab;
     height: 70vh;
     width: 70vh;
-    background-color: #0000ff;
     margin: 15vh auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -22,16 +18,17 @@ main{
 }
 
 .lila {
-    background-color: #a090af;    
+    background-color:  #a090af;
     grid-column: 1/4;
 }
 
 .bruin {
-    background-color: brown;
+    background-color: #a16122;
 }
 
 .geel {
-    background-color: yellow;
+    background-color: #e7c948;
+    grid-column: 1/2;
 }
 
 .marine {
@@ -45,5 +42,5 @@ main{
 }
 
 .rood {
-    background-color: red;
+    background-color: #cd2424;
 }
