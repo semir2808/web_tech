@@ -1,0 +1,57 @@
+/* stijl.css - labo 5, raster (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+
+}
+
+/* === your rules === */
+
+main {
+    height: 100vh;
+    padding: 1vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5vh;
+}
+
+.vlak {
+    color: white;
+    font-size: 4vh;
+    text-align: right;
+    padding: 1.3vh;
+}
+    
+.a {
+    background-color: #e9493f;
+}
+
+.b {
+    background-color: #edd24a;
+    grid-column-start: 4;
+}
+
+.c {
+    background-color: #072f55;
+}
+
+.d {
+    background-color: #52a51a;
+}
+
+.e {
+    background-color: pink;
+}
+
+.f {
+    background-color: lightgreen;
+}
+
+.g {
+    background-color: #ebc47a;
+}
+
+.h {
+    background-color: #e8882c;
+    grid-column: 4;
+}
