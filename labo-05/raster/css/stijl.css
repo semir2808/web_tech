@@ -2,11 +2,10 @@
 
 /* === tokens === */
 :root {
-
 }
 
 /* === your rules === */
-
+/*
 main {
     height: 100vh;
     padding: 1vh;
@@ -54,4 +53,65 @@ main {
 .h {
     background-color: #e8882c;
     grid-column: 4;
+}
+
+*/
+
+.vlak {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1vh;
+  color: white;
+  font-size: 4vh;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    "a . . b"
+    "c d e f"
+    "g . . h";
+  padding: 1.5vh;
+  gap: 1.5vh;
+  height: 100vh;
+}
+
+.a {
+  background-color: #e9493f;
+  grid-area: a;
+}
+
+.b {
+  background-color: #edd24a;
+  grid-area: b;
+}
+
+.c {
+  background-color: #072f55;
+  grid-area: c;
+}
+
+.d {
+  background-color: #52a51a;
+  grid-area: d;
+}
+
+.e {
+  background-color: pink;
+  grid-area: e;
+}
+
+.f {
+  background-color: lightgreen;
+  grid-area: f;
+}
+
+.g {
+  background-color: #ebc47a;
+  grid-area: g;
+}
+
+.h {
+  background-color: #e8882c;
+  grid-area: h;
 }
