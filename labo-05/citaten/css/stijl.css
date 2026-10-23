@@ -6,6 +6,60 @@
 
 /* === your rules === */
 
+/*
+.citaten {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.citaat {
+  flex-basis: 18rem;
+  flex-grow: 1;
+  padding: 2rem;
+  border-left: 1rem solid;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.citaat p {
+  flex-grow: 1;
+}
+
+.blauw {
+  color: #1e5bd8;
+}
+
+.roze {
+  color: #e88bb4;
+}
+
+.rood {
+  color: #c51f2a;
+}
+
+.oranje {
+  color: #d98c1a;
+}
+
+.groen {
+  color: #3b7a2a;
+}
+
+.salie {
+  color: #8fb89a;
+}
+
+.paars {
+  color: #7b4fa3;
+}
+
+.grijs {
+  color: #6b6b6b;
+}
+
+*/
 .citaten {
   display: flex;
   flex-wrap: wrap;
