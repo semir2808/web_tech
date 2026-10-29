@@ -2,9 +2,90 @@
 
 /* === tokens === */
 :root {
-
+  --titel: #2c6e8f;
+  --papier: #f3f1ec;
+  --titel: #1f2933;
+  --grafiek: #2c6e8f;
+  --omzet: #c8742e;
+  --bezoekers: #3b7a2a;
+  --agenda: #6b4fa3;
+  --taken: #b2323a;
 }
 
 /* === base: narrow screens first === */
+.titel {
+  background-color: black;
+}
 
+.grafiek {
+  background-color: var(--grafiek);
+}
+
+.omzet {
+  background-color: var(--omzet);
+}
+
+.bezoekers {
+  background-color: var(--bezoekers);
+}
+
+.agenda {
+  background-color: var(--agenda);
+}
+
+.taken {
+  background-color: var(--taken);
+}
+
+.weer {
+  background-color: goldenrod;
+  color: black;
+}
 /* === media queries: below the base rules === */
+
+main.dashboard {
+  height: 98vh;
+  display: grid;
+  gap: 1rem;
+}
+
+.tegel {
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+body {
+  background-color: var(--papier);
+  color: white;
+  padding: 2rem;
+  font-family: arial;
+}
+
+@media (min-width: 800px) {
+  main.dashboard {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+  }
+  .titel,
+  .grafiek,
+  .weer {
+    grid-column: 1/-1;
+  }
+  .tegel {
+    min-height: 6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  main.dashboard {
+    grid-template-columns: repeat(4, 1fr);
+    height: 98vh;
+  }
+  .grafiek {
+    grid-area: 2/1/4/3;
+  }
+  .agenda {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+}
