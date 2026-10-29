@@ -2,7 +2,164 @@
 
 /* === tokens === */
 :root {
+  --papier: #f4efe6;
+  --kaart: white;
+  --inkt: #2b2b2b;
+  --gedempt: #6b6b6b;
+  --balk: #2f241d;
+  --text: #f4efe6;
+  --accent: #c8742e;
+}
 
+a,
+li {
+  text-decoration: none;
+  list-style: none;
 }
 
 /* === your rules === */
+body {
+  display: grid;
+  grid-template-areas:
+    "kop kop"
+    "zijbalk inhoud"
+    "voet voet";
+  grid-template-rows: auto 1fr auto;
+  font-family: verdana;
+  line-height: 1.6;
+  height: 100vh;
+}
+
+header {
+  grid-area: kop;
+  background-color: var(--balk);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+aside {
+  grid-area: zijbalk;
+  background-color: var(--papier);
+  border-right: 0.011rem solid lightgray;
+  padding: 2rem;
+  width: 16rem;
+}
+
+main {
+  grid-area: inhoud;
+  background-color: var(--papier);
+  padding: 3rem;
+}
+
+footer {
+  display: grid;
+  grid-area: voet;
+  background-color: var(--balk);
+  min-height: 5rem;
+  color: var(--text);
+  text-align: center;
+}
+
+/* kleine dingen */
+
+.logo {
+  color: var(--accent);
+  font-size: 2rem;
+}
+
+a {
+  padding: 1rem;
+  color: var(--text);
+}
+
+.actief {
+  color: var(--accent);
+}
+
+h1 {
+  font-family: georgia;
+  font-size: 2.5rem;
+}
+
+aside h2 {
+  margin-bottom: 0.5rem;
+}
+
+aside p {
+  margin-bottom: 3rem;
+  color: var(--gedempt);
+}
+
+.kaarten {
+  display: grid;
+  grid-template-areas:
+    "espresso thee cappuccino"
+    "croissant ontbijt taart";
+  gap: 2rem;
+}
+
+.kaart {
+  background-color: white;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 1px 20px rgb(40, 39, 39);
+}
+
+.kaart:nth-child(2),
+.kaart:nth-child(5) {
+  border-top: solid 0.8rem var(--accent);
+}
+.kaart:nth-child(1) {
+  grid-area: espresso;
+}
+.kaart:nth-child(2) {
+  grid-area: thee;
+}
+.kaart:nth-child(3) {
+  grid-area: cappuccino;
+}
+.kaart:nth-child(4) {
+  grid-area: croissant;
+}
+.kaart:nth-child(5) {
+  grid-area: ontbijt;
+}
+.kaart:nth-child(6) {
+  grid-area: taart;
+}
+
+.kaart img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  width: 100%;
+}
+
+.kaart div {
+  padding: 1.2rem;
+}
+
+.badge {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border: solid var(--accent);
+  border-radius: 20rem;
+  padding: 0 1.2rem;
+  background-color: var(--accent);
+  color: var(--papier);
+  text-transform: uppercase;
+}
+
+footer {
+  align-items: center;
+}
