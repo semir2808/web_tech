@@ -2,9 +2,100 @@
 
 /* === tokens === */
 :root {
-
+  --1: #f4704e;
+  --2: #1b6a8a;
+  --3: #6b4a42;
+  --4: #3d4f4a;
+  --5: #1f6f63;
+  --6: #ffc83d;
+  --7: #ef5350;
+  --8: #0a9d4f;
+  --9: #d32f2f;
+  --10: #ebe5dc;
 }
 
 /* === base: narrow screens first === */
+main {
+  display: grid;
+  gap: 0.25rem;
+  min-height: calc(100vh - 0.5rem);
+  margin: 0.25rem;
+  min-width: 400px;
+}
+
+div {
+  font-weight: bold;
+  color: white;
+  padding-top: 0.25rem;
+  padding-left: 0.75rem;
+}
+
+.r1 {
+  background-color: var(--1);
+}
+.r2 {
+  background-color: var(--2);
+}
+.r3 {
+  background-color: var(--3);
+}
+.r4 {
+  background-color: var(--4);
+}
+.r5 {
+  background-color: var(--5);
+}
+.r6 {
+  background-color: var(--6);
+}
+.r7 {
+  background-color: var(--7);
+}
+.r8 {
+  background-color: var(--8);
+}
+.r9 {
+  background-color: var(--9);
+}
+.r10 {
+  background-color: var(--10);
+  color: #2b2b2b;
+}
 
 /* === media queries: below the base rules === */
+@media (min-width: 1000px) {
+  main {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  .r1 {
+    grid-column: 1 / -1;
+  }
+  .r2 {
+    grid-column: 2/-1;
+  }
+  .r3 {
+    grid-column: 3/-1;
+  }
+  .r4 {
+    grid-column: 4/-1;
+  }
+  .r5 {
+    grid-column: 5/-1;
+  }
+  .r6 {
+    grid-column: 6/-1;
+  }
+  .r7 {
+    grid-column: 7/-1;
+  }
+  .r8 {
+    grid-column: 8/-1;
+  }
+  .r9 {
+    grid-column: 9/-1;
+  }
+  .r10 {
+    grid-column: 10/-1;
+  }
+}
