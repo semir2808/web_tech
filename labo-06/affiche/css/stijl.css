@@ -16,12 +16,12 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--affische);
-  margin: 2rem 1rem;
-  min-height: calc(100vh - 4rem);
+  margin: 2rem auto;
   padding: clamp(1.5rem, 6vw, 3rem);
   justify-content: center;
-  width: min(28rem, 100% - 2rem);
+  width: min(28rem, calc(100% - 2rem));
   position: relative;
+  aspect-ratio: 3/4;
 }
 
 h1 {
@@ -41,8 +41,8 @@ p {
 }
 
 .sticker {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  place-items: center;
   text-align: center;
   justify-content: center;
   height: clamp(4rem, 14vw, 7rem);
@@ -53,30 +53,63 @@ p {
 .prijs {
   background-color: darkgoldenrod;
   border-radius: 50%;
-  top: 10vw;
-  left: 10vw;
+  top: 2.5rem;
+  left: 2.5rem;
   z-index: 1;
 }
 
 .datum {
   background-color: var(--tekst);
-  top: 5vw;
-  left: 5vw;
+  top: 1rem;
+  left: 1rem;
 }
 
 .uitverkocht {
   background-color: red;
   color: white;
   border-radius: 50%;
-  top: 20vw;
-  left: 20vw;
+  top: 5.5rem;
+  left: 5.5rem;
   z-index: 1;
 }
 
 .logo {
   background-color: black;
   color: white;
-  top: 15vw;
-  left: 15vw;
+  top: 4rem;
+  left: 4rem;
 }
 /* === media queries: below the base rules === */
+
+@media (min-width: 50rem) {
+  .logo {
+    top: auto;
+    left: auto;
+    bottom: 6rem;
+    right: 6rem;
+  }
+  .uitverkocht {
+    top: auto;
+    left: auto;
+    bottom: 3rem;
+    right: 3rem;
+  }
+}
+
+/* === from 1000px: the four corners === */
+@media (min-width: 62.5rem) {
+  .prijs {
+    top: 2rem;
+    left: auto;
+    right: 2rem;
+  }
+  .logo {
+    bottom: 2rem;
+    right: auto;
+    left: 2rem;
+  }
+  .uitverkocht {
+    bottom: 2rem;
+    right: 2rem;
+  }
+}
