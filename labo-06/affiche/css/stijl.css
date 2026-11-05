@@ -2,9 +2,81 @@
 
 /* === tokens === */
 :root {
-
+  --pagina: #1d1d1b;
+  --affische: #2554ab;
+  --tekst: #fff8ee;
 }
 
 /* === base: narrow screens first === */
+body {
+  background-color: var(--pagina);
+}
 
+.affiche {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--affische);
+  margin: 2rem 1rem;
+  min-height: calc(100vh - 4rem);
+  padding: clamp(1.5rem, 6vw, 3rem);
+  justify-content: center;
+  width: min(28rem, 100% - 2rem);
+  position: relative;
+}
+
+h1 {
+  color: var(--tekst);
+  font-family: georgia;
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  line-height: 1.05;
+  padding-bottom: 1.875vh;
+}
+
+p {
+  color: var(--tekst);
+  font-family: serif;
+  font-size: clamp(0.7rem, 4vw, 0.9rem);
+  text-transform: uppercase;
+  line-height: 0.1rem;
+}
+
+.sticker {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  height: clamp(4rem, 14vw, 7rem);
+  width: clamp(4rem, 14vw, 7rem);
+  position: absolute;
+}
+
+.prijs {
+  background-color: darkgoldenrod;
+  border-radius: 50%;
+  top: 10vw;
+  left: 10vw;
+  z-index: 1;
+}
+
+.datum {
+  background-color: var(--tekst);
+  top: 5vw;
+  left: 5vw;
+}
+
+.uitverkocht {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  top: 20vw;
+  left: 20vw;
+  z-index: 1;
+}
+
+.logo {
+  background-color: black;
+  color: white;
+  top: 15vw;
+  left: 15vw;
+}
 /* === media queries: below the base rules === */
