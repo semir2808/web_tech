@@ -4,11 +4,64 @@
 
 /* === tokens === */
 :root {
-
 }
 
 /* === base === */
 
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 2fr 2fr 1fr;
+  font-family: Verdana;
+}
+
 /* === the hero: photo as background, text on a dark panel (7.10, F7.10) === */
 
+header {
+  background-image: url(../afbeeldingen/kaaien.jpg);
+  background-size: cover;
+  padding-bottom: 5%;
+  padding-top: 67%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+header div {
+  background-color: rgb(0 0 0/ 0.55);
+  padding: 1rem;
+  color: white;
+  font-size: 0.7rem;
+  position: relative;
+  margin-bottom: auto;
+  padding-bottom: 4rem;
+}
+
+header h1 {
+  padding: 0.8rem 0;
+}
+
+.lead {
+  line-height: 2.2em;
+  color: whitesmoke;
+}
+
+.bovenkop {
+  font-size: 0.7rem;
+  line-height: 1.5rem;
+  color: whitesmoke;
+}
+
+.knop {
+  background-color: hsl(200 70% 32%);
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  position: absolute;
+  bottom: 5%;
+}
 /* === main, aside with a corner decoration, footer with a repeating tile === */
+
+main {
+  padding: 4rem 1rem;
+  color: hsl(205 40% 12%);
+}
