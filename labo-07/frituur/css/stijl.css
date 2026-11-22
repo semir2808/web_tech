@@ -1,10 +1,146 @@
-/* stijl.css - labo 7, frituur (reset.css is linked before this file) */
+/* stijl.css - labo 7, fietsatelier (reset.css is linked before this file, thema.css after it) */
 
-/* === tokens: five colour roles in hsl (7.7) === */
+/* === tokens for look A: colours, fonts, radius, type scale, spacing scale === */
 :root {
+  color-scheme: light dark;
+  --licht: hsl(45 60% 96%);
+  --inkt: hsl(25 30% 12%);
+  --gedempt: hsl(25 10% 40%);
+  --accent: hsl(22 85% 40%);
+  --lijn: hsl(40 25% 80%);
+  --koppen: georgia;
+  --tekst: verdana;
 
+  /* type scale, ratio 1.25 */
+  --text-s: 0.8rem;
+  --text-m: 1rem;
+  --text-l: 1.25rem;
+  --text-xl: 1.563rem;
+  --text-xxl: 1.953rem;
+  --text-xxxl: 2.441rem;
+
+  /* spacing scale, doubling */
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 2rem;
+  --space-xl: 4rem;
+}
+
+@media (prefers-color-chesme: dark) {
+  :root {
+    color-scheme: dark;
+    --licht: red;
+    --gedempt: hsl(25 10% 40%);
+    --accent: hsl(22 85% 40%);
+    --lijn: blue;
+    --koppen: georgia;
+    --tekst: verdana;
+  }
 }
 
 /* === base === */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100svh;
+}
 
-/* === dark mode: tokens only (7.9) === */
+main {
+  max-width: 56rem;
+  padding: 0 var(--space-m) var(--space-l) var(--space-m);
+  margin: 0 auto;
+}
+
+/* === header, intro, cards, footer: every colour via var(), nothing hard-coded === */
+header {
+  text-align: center;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-l);
+}
+
+.naam {
+  font-size: var(--text-xxl);
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.slogan {
+  color: var(--gedempt);
+  padding-top: var(--space-xs);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-l);
+  max-height: 10vh;
+}
+
+main section {
+  min-width: 16rem;
+}
+
+section h2,
+aside h2 {
+  font-size: var(--text-l);
+  line-height: 1.2;
+  border-bottom: 2px var(--accent) solid;
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-s);
+}
+
+section li {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-s) 0;
+  border-bottom: 1px var(--lijn) dashed;
+}
+
+section li span {
+  display: flex;
+  flex-direction: row;
+}
+
+aside p {
+  max-width: 65ch;
+}
+
+.info {
+  grid-column: 1/4;
+  border: 1px var(--lijn) solid;
+  border-radius: var(--space-s);
+  padding: var(--space-m);
+}
+
+.gedempt {
+  color: var(--gedempt);
+  padding-top: var(--space-s);
+}
+
+.label {
+  background-color: var(--accent);
+  font-size: 0.6rem;
+  font-family: verdana;
+  color: var(--licht);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  padding: var(--space-xs) var(--space-s);
+  border-radius: var(--space-xs);
+  margin-left: var(--space-s);
+}
+
+.prijs {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+footer {
+  border-top: 1px solid var(--lijn);
+  padding: var(--space-l) 0;
+  text-align: center;
+  color: var(--gedempt);
+  font-size: var(text-s);
+  max-height: 10vh;
+}

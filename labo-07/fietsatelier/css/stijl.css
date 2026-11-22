@@ -2,9 +2,43 @@
 
 /* === tokens for look A: colours, fonts, radius, type scale, spacing scale === */
 :root {
+  --licht: hsl(45 60% 96%);
+  --inkt: hsl(25 30% 12%);
+  --gedempt: hsl(25 10% 40%);
+  --accent: hsl(22 85% 40%);
+  --lijn: hsl(40 25% 80%);
+  --koppen: georgia;
+  --tekst: verdana;
 
+  /* type scale, ratio 1.25 */
+  --text-s: 0.8rem;
+  --text-m: 1rem;
+  --text-l: 1.25rem;
+  --text-xl: 1.563rem;
+  --text-xxl: 1.953rem;
+  --text-xxxl: 2.441rem;
+
+  /* spacing scale, doubling */
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 2rem;
+  --space-xl: 4rem;
 }
 
 /* === base === */
 
 /* === header, intro, cards, footer: every colour via var(), nothing hard-coded === */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header a {
+  padding: 0.5rem 1rem;
+}
