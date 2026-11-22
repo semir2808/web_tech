@@ -118,7 +118,7 @@ main h2 {
   min-height: 18rem;
   background-image: url(../afbeeldingen/kompas.png);
   background-size: 8rem;
-  background-position: 21rem 9rem;
+  background-position: right 1rem bottom 1rem;
   background-repeat: no-repeat;
 }
 
@@ -155,7 +155,6 @@ footer p {
   }
 
   .praktisch {
-    background-position: 13rem 9rem;
     background-repeat: no-repeat;
   }
 }
