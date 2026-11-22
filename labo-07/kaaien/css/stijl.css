@@ -1,67 +1,161 @@
 /* stijl.css - labo 7, kaaien (reset.css is linked before this file) */
 
 /* === fonts === */
+@font-face {
+  font-family: "Fraunces";
+  src: url(../fonts/fraunces-latin-wght-normal.woff2) format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* === tokens === */
 :root {
+  --vlak: rgb(0 0 0 / 0.55);
+  --oppervlak: hsl(200 30% 97%);
+  --inkt: hsl(205 40% 12%);
+  --gedempt: hsl(205 12% 40%);
+  --accent: hsl(200 70% 32%);
+  --lijn: hsl(200 20% 82%);
+  --tekst: verdana;
+
+  /* type scale, ratio 1.25 */
+  --text-s: 0.8rem;
+  --text-m: 1rem;
+  --text-l: 1.25rem;
+  --text-xl: 1.563rem;
+  --text-xxl: 1.953rem;
+  --text-xxxl: 2.441rem;
+
+  /* spacing scale, doubling */
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 2rem;
+  --space-xl: 4rem;
 }
 
 /* === base === */
 
-body {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 2fr 2fr 1fr;
-  font-family: Verdana;
-}
-
 /* === the hero: photo as background, text on a dark panel (7.10, F7.10) === */
-
-header {
+.held {
   background-image: url(../afbeeldingen/kaaien.jpg);
   background-size: cover;
-  padding-bottom: 5%;
-  padding-top: 67%;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-header div {
-  background-color: rgb(0 0 0/ 0.55);
-  padding: 1rem;
-  color: white;
-  font-size: 0.7rem;
+  background-repeat: no-repeat;
+  min-height: 70svh;
   position: relative;
-  margin-bottom: auto;
-  padding-bottom: 4rem;
 }
 
-header h1 {
-  padding: 0.8rem 0;
-}
-
-.lead {
-  line-height: 2.2em;
-  color: whitesmoke;
+.paneel {
+  position: absolute;
+  bottom: clamp(1rem, 5vw, 4rem);
+  left: clamp(1rem, 5vw, 4rem);
+  right: clamp(1rem, 5vw, 4rem);
+  max-width: 36rem;
+  padding: var(--space-l);
+  color: white;
+  background-color: var(--vlak);
 }
 
 .bovenkop {
-  font-size: 0.7rem;
-  line-height: 1.5rem;
-  color: whitesmoke;
+  font-size: var(--text-s);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  padding-bottom: var(--space-s);
+}
+
+.held h1 {
+  font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+  font-weight: bold;
+  line-height: 1.1;
+  padding-bottom: var(--space-m);
+}
+
+.lead {
+  padding-bottom: var(--space-l);
 }
 
 .knop {
-  background-color: hsl(200 70% 32%);
+  background-color: var(--accent);
+  color: var(--lijn);
   text-decoration: none;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  position: absolute;
-  bottom: 5%;
+  font-weight: bold;
+  padding: var(--space-s) var(--space-l);
 }
-/* === main, aside with a corner decoration, footer with a repeating tile === */
+
+.knop:hover,
+.knop:focus {
+  background-color: var(--lijn);
+  color: var(--accent);
+}
 
 main {
-  padding: 4rem 1rem;
-  color: hsl(205 40% 12%);
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-m);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-l);
+}
+
+main > * {
+  min-width: 18rem;
+  max-width: 65ch;
+  padding-bottom: var(--space-m);
+}
+
+main h2 {
+  font-size: var(--text-xl);
+  color: var(--accent);
+  padding-bottom: var(--space-s);
+}
+
+.praktisch {
+  border: 1px solid var(--lijn);
+  padding: var(--space-m);
+  padding-bottom: var(--space-xl);
+  min-height: 18rem;
+  background-image: url(../afbeeldingen/kompas.png);
+  background-size: 8rem;
+  background-position: 21rem 9rem;
+  background-repeat: no-repeat;
+}
+
+.praktisch ul {
+  padding-left: var(--space-m);
+}
+
+.praktisch li {
+  margin-bottom: var(--space-xs);
+}
+
+footer {
+  background-image: url(../afbeeldingen/golfjes.png);
+  background-repeat: repeat;
+  border-top: 1px var(--lijn) solid;
+  padding: var(--space-xl) 0;
+  margin-top: var(--space-xl);
+  color: var(--gedempt);
+  font-size: var(--text-s);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+footer p {
+  padding: var(--space-s) var(--space-m);
+  background-color: var(--oppervlak);
+}
+
+@media (max-width: 800px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .praktisch {
+    background-position: 13rem 9rem;
+    background-repeat: no-repeat;
+  }
 }
