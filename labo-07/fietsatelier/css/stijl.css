@@ -2,13 +2,13 @@
 
 /* === tokens for look A: colours, fonts, radius, type scale, spacing scale === */
 :root {
-  --licht: hsl(45 60% 96%);
-  --inkt: hsl(25 30% 12%);
-  --gedempt: hsl(25 10% 40%);
-  --accent: hsl(22 85% 40%);
-  --lijn: hsl(40 25% 80%);
+  --oppervlak: hsl(40 30% 96%);
+  --inkt: hsl(220 20% 15%);
+  --gedempt: hsl(220 10% 42%);
+  --accent: hsl(160 50% 30%);
+  --lijn: hsl(40 15% 82%);
   --koppen: georgia;
-  --tekst: verdana;
+  --text: verdana;
 
   /* type scale, ratio 1.25 */
   --text-s: 0.8rem;
@@ -26,19 +26,137 @@
   --space-xl: 4rem;
 }
 
+main {
+  min-height: 100svh;
+}
+
 /* === base === */
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: var(--oppervlak);
+}
 
 /* === header, intro, cards, footer: every colour via var(), nothing hard-coded === */
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: var(--space-m) var(--space-l);
+  border-bottom: 1px var(--lijn) solid;
 }
 
 header ul {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  list-style: none;
+  gap: var(--space-m);
+}
+
+.naam {
+  font-family: var(--koppen);
+  font-size: var(--text-l);
+  font-weight: bold;
 }
 
 header a {
-  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--inkt);
+}
+
+header a:hover,
+header a:focus {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.intro {
+  max-width: 44rem;
+  padding: var(--space-xl) var(--space-l);
+}
+
+.bovenkop {
+  font-size: var(--text-s);
+  color: var(--accent);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-bottom: var(--space-s);
+}
+
+.intro h1 {
+  font-size: var(--text-xxl);
+  font-weight: bold;
+  line-height: 1.1;
+  padding-bottom: var(--space-m);
+}
+
+.lead {
+  font-size: var(--text-l);
+  color: var(--gedempt);
+  padding-bottom: var(--space-l);
+}
+
+.knop {
+  background-color: var(--accent);
+  color: var(--oppervlak);
+  font-weight: bold;
+  padding: var(--space-s) var(--space-l);
+  border: 2px var(--accent) solid;
+  border-radius: 0;
+  text-decoration: none;
+}
+
+.knop:focus,
+.knop:hover {
+  color: var(--accent);
+  background-color: var(--oppervlak);
+}
+
+.diensten h2 {
+  padding-bottom: var(--space-m);
+  font-size: var(--text-xl);
+  padding-left: var(--space-l);
+}
+
+.kaarten {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-m);
+}
+
+.kaart {
+  padding-left: var(--space-l);
+  list-style: none;
+  min-width: 14rem;
+  border: 1px var(--lijn) solid;
+  border-radius: 0;
+  position: relative;
+  padding: var(--space-m);
+  padding-bottom: var(--space-xl);
+}
+
+.kaart h3 {
+  font-size: var(--text-l);
+  padding-bottom: var(--space-s);
+}
+
+.kaart p {
+  color: var(--gedempt);
+}
+
+.kaart .prijs {
+  color: var(--accent);
+  font-weight: bold;
+  position: absolute;
+  bottom: 1.5rem;
+}
+
+footer {
+  border-top: 1px var(--lijn) solid;
+  padding: var(--space-l) var(--space-m);
+  color: var(--gedempt);
+  font-size: var(--text-s);
 }
